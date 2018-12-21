@@ -1,6 +1,6 @@
-# API Client for healthchecks.io
+# Nodejs API Client for healthchecks.io
 
-The current API Client for healthchecks.io is Nodejs module 
+The current API Client for healthchecks.io is Nodejs module. For more details see healthchecks.io [API Documentation](https://healthchecks.io/docs/api/)
 
 ## Get started
 
@@ -14,13 +14,13 @@ let client = require('hchk').Client( '{API_KEY}' );
 
 ## Documentation
 
-See healthchecks.io API Documentation [here](https://healthchecks.io/docs/api/)
-
 ### Get a list of existing checks
 
 ```js
 client.listChecks( callback );
 ```
+
+More details [here](https://healthchecks.io/docs/api/#list-checks)
 
 ### Create a new check
 
@@ -28,11 +28,15 @@ client.listChecks( callback );
 client.createCheck( data, callback );
 ```
 
+More details [here](https://healthchecks.io/docs/api/#create-check)
+
 ### Update an existing check
 
 ```js
 client.updateCheck( uuid, data, callback );
 ```
+
+More details [here](https://healthchecks.io/docs/api/#update-check)
 
 ### Pause monitoring of a check
 
@@ -40,14 +44,20 @@ client.updateCheck( uuid, data, callback );
 client.pauseCheck( uuid, callback );
 ```
 
+More details [here](https://healthchecks.io/docs/api/#pause-check)
+
 ### Delete check
 
 ```js
 client.deleteCheck( uuid, callback );
 ```
 
+More details [here](https://healthchecks.io/docs/api/#delete-check)
+
 ### Get a list of existing integrations
 
 ```js
 client.listChannels( callback );
 ```
+
+More details [here](https://healthchecks.io/docs/api/#list-channels)
