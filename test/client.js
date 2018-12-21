@@ -66,6 +66,26 @@ module.exports = {
 
     },
 
+    'pingCheck (Ping existing check)': function ( done ) {
+
+      this.timeout( 30000 );
+
+      let uuid = _.get( module.exports, 'check.uuid' );
+
+      uuid.should.not.be.empty();
+
+      if( !uuid ) {
+        return done();
+      }
+
+      module.exports.client.pingCheck( uuid, function(err){
+        should.not.exist(err);
+
+        done();
+      } );
+
+    },
+
     'updateCheck (Update an existing check)': function ( done ) {
 
       this.timeout( 30000 );

@@ -75,6 +75,28 @@ module.exports = class hchkClient {
   }
 
   /**
+   * Ping check
+   *
+   * @param data
+   * @param cb
+   */
+  pingCheck(uuid, cb) {
+    debug( 'pingCheck' );
+    let _package = require('../package.json');
+    require('request')( {
+      url: 'https://hc-ping.com/' + uuid,
+      headers: {
+        "User-Agent": _package.name + '/' + _package.version + ' Nodejs API Client for healthchecks.io'
+      }
+    }, function(err, response, body){
+      if(err || body !== "OK") {
+        return cb(err || new Error("Invalid response from healthchecks.io"));
+      }
+      cb();
+    } );
+  }
+
+  /**
    * Update an existing check
    * Documentation: https://healthchecks.io/docs/api/#update-check
    *

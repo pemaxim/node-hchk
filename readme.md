@@ -30,6 +30,12 @@ client.createCheck( data, callback );
 
 More details [here](https://healthchecks.io/docs/api/#create-check)
 
+### Ping existing check
+
+```js
+client.pingCheck( uuid, callback );
+```
+
 ### Update an existing check
 
 ```js

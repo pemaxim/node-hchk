@@ -1,7 +1,7 @@
 {
   "name": "hchk",
-  "version": "0.0.1",
-  "description": "API Wrapper for healthecks.io",
+  "version": "0.0.2",
+  "description": "Nodejs API Client for healthchecks.io",
   "keywords": [
     "healthecks",
     "healthecks.io",
