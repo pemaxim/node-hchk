@@ -1,0 +1,29 @@
+{
+  "name": "hchk",
+  "version": "0.0.1",
+  "description": "API Wrapper for healthecks.io",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "MOCHA_TEST=true DEBUG=hchkClient mocha --ui exports --reporter list"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pemaxim/node-hchk.git"
+  },
+  "author": "Maxim Peshkov <pemaxim@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pemaxim/node-hchk/issues"
+  },
+  "homepage": "https://github.com/pemaxim/node-hchk#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "debug": "^4.1.0",
+    "lodash": "^4.17.11",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1",
+    "should": "^13.2.1"
+  }
+}
